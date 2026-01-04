@@ -1,7 +1,7 @@
 """
 Tahap 2: Dataset Validation & Exploration
 -----------------
-Script ini memvalidasi butterfly dataset dengan menganalisis:
+Code ini memvalidasi butterfly dataset dengan menganalisis:
 - Number of classes
 - Number of images per class
 - Dataset balance statistics
@@ -79,5 +79,6 @@ if not imbalanced_classes.empty:
     print(imbalanced_classes.head())
 else:
     print("\nNo significant class imbalance detected.")
+
 
 
