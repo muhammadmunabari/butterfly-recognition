@@ -1,7 +1,5 @@
 """
-04_model_definition.py
-----------------------
-Stage 4: GoogLeNet (Inception v1) Model Definition
+Tahap 4: GoogLeNet (Inception v1) Model Definition
 """
 
 import tensorflow as tf
@@ -79,3 +77,4 @@ def build_googlenet(input_shape=(224, 224, 3), num_classes=50):
 if __name__ == "__main__":
     model = build_googlenet()
     model.summary()
+
