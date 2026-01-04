@@ -1,7 +1,5 @@
 """
-06_evaluation.py
-----------------
-Stage 6: AlexNet Model Evaluation
+Tahap 6: AlexNet Model Evaluation
 """
 
 import os
@@ -81,4 +79,5 @@ np.save(conf_matrix_path, conf_matrix)
 print("\nEvaluation completed.")
 print("Classification report saved to:", report_path)
 print("Confusion matrix saved to:", conf_matrix_path)
+
 
