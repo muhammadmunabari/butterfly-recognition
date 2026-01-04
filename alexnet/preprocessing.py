@@ -1,9 +1,7 @@
 """
-03_preprocessing.py
--------------------
-Stage 3: Image Preprocessing & Data Generator
-
-This script prepares the butterfly dataset for CNN training by:
+Tahap 3: Image Preprocessing & Data Generator
+------------------------
+Menyiapkan butterfly dataset untuk pelatihan CNN dengan melakukan:
 - Resizing images
 - Normalizing pixel values
 - Applying data augmentation
@@ -82,3 +80,4 @@ print(f"Batch Size        : {BATCH_SIZE}")
 print(f"Training Samples  : {TRAIN_SAMPLES}")
 print(f"Validation Samples: {VAL_SAMPLES}")
 print(f"Number of Classes : {NUM_CLASSES}")
+
