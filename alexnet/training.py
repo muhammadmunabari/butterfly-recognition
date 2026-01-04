@@ -1,8 +1,7 @@
 """
-05_training.py
---------------
-Stage 5: AlexNet Model Compilation & Training
-Self-contained training script (journal-safe).
+Tahap 5: AlexNet Model Compilation & Training
+-----------------
+Self-contained training.
 """
 
 import os
@@ -128,3 +127,4 @@ history = model.fit(
 
 print("\nTraining selesai.")
 print("Model terbaik disimpan di:", MODEL_PATH)
+
