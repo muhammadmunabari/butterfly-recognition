@@ -16,7 +16,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # ==============================
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATASET_DIR = os.path.join(PROJECT_ROOT, "dataset", "raw", "Train")
-MODEL_PATH = os.path.join(PROJECT_ROOT, "results", "alexnet", "alexnet_best_model.keras")
+MODEL_PATH = os.path.join(PROJECT_ROOT, "results", "alexnet", "alexnet_best_model.h5")
 
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 1
@@ -75,3 +75,4 @@ for i in range(NUM_SAMPLES):
 
 plt.tight_layout()
 plt.show()
+
