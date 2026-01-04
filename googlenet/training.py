@@ -1,11 +1,9 @@
 """
-05_training.py
---------------
-Stage 5: GoogLeNet Model Training
+Tahap 5: GoogLeNet Model Training
 """
 
 # ==============================
-# FIX PYTHON PATH (WAJIB DI ATAS)
+# PYTHON PATH
 # ==============================
 import os
 import sys
@@ -80,3 +78,4 @@ history = model.fit(
 print("\nTraining selesai.")
 print("Model terbaik disimpan di:", MODEL_PATH)
 print("Training log disimpan di:", LOG_PATH)
+
