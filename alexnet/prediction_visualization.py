@@ -14,13 +14,15 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # ==============================
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATASET_DIR = os.path.join(PROJECT_ROOT, "dataset", "raw", "Train")
-MODEL_PATH = os.path.join(PROJECT_ROOT, "results", "alexnet", "alexnet_best_model.h5")
+MODEL_PATH = os.path.join(PROJECT_ROOT, "results", "alexnet", "alexnet_best_model.keras")
 
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 1
 VALIDATION_SPLIT = 0.2
-SEED = 42
-NUM_SAMPLES = 9  # number of images to visualize
+NUM_SAMPLES = 12
+
+# random seed agar gambar selalu berbeda setiap running
+SEED = random.randint(0, 10000)
 
 # ==============================
 # Load Model
@@ -32,7 +34,7 @@ print("Model loaded successfully.")
 # Validation Generator
 # ==============================
 datagen = ImageDataGenerator(
-    rescale=1./255,
+    rescale=1.0 / 255,
     validation_split=VALIDATION_SPLIT
 )
 
@@ -49,18 +51,18 @@ val_generator = datagen.flow_from_directory(
 class_labels = list(val_generator.class_indices.keys())
 
 # ==============================
-# Visualization
+# Prediction Visualization
 # ==============================
-plt.figure(figsize=(12, 12))
+plt.figure(figsize=(16, 12))
 
 for i in range(NUM_SAMPLES):
     image, label = next(val_generator)
-    true_label = class_labels[np.argmax(label)]
 
+    true_label = class_labels[np.argmax(label)]
     prediction = model.predict(image, verbose=0)
     pred_label = class_labels[np.argmax(prediction)]
 
-    plt.subplot(3, 3, i + 1)
+    plt.subplot(3, 4, i + 1)
     plt.imshow(image[0])
     plt.axis("off")
 
@@ -73,5 +75,3 @@ for i in range(NUM_SAMPLES):
 
 plt.tight_layout()
 plt.show()
-
-
